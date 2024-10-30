@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block append head
+    link(rel='stylesheet', href='/css/services.css')
+    title Autres services
+
+block content
+    main
+        section(class="one")
+            video(muted autoplay loop)
+                source(src="/video/mariage.mp4" type="video/mp4")
+
+        section(class="two")
+            video(muted autoplay loop)
+                source(src="/video/thaima.mp4" type="video/mp4")
+
+        section(class="three")
+            img(src="images/8.jpg")
+            div(class="slider" id="slider1")
+            .text
+                h1(itemprop="headline") 
+                    strong Shooting photo
+                
+        section(class="four")
+            div(class="slider" id="slider2")
+            .text
+                h1(itemprop="headline") 
+                    strong Événementiel
+

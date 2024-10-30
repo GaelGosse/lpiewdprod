@@ -1,0 +1,81 @@
+extends ../layout.pug
+
+block append head
+    link(rel='stylesheet', href='/css/qsn.css')
+    title Qui sommes nous ?
+
+block content
+    main.qsn
+        section(class="one")
+            img(src="images/10.jpg")
+            .text
+                h1(itemprop="headline")
+                    strong. 
+                        Notre équipe 
+                    |à votre service 
+
+        .presentation 
+            h1(itemprop="headline") Notre vision
+            p Spécialisé dans la production de vidéo publicitaire, 
+                strong. 
+                    LPIEWDPROD ENTERTAINMENT 
+                |est né d’une vision commune, celle de permettre aux petites et moyennes entreprises de mettre en valeur leurs produits, leurs domaines, leur savoir-faire.
+            p La satisfaction client est notre priorité. Chaque projet chez 
+                strong. 
+                    LPIEWDPROD 
+                |est supervisé d’un chef de projet dont la mission est de veiller à ce que vos besoins soient respectés à la lettre.
+            p Vous désirez transmettre votre passion à travers un contenu multimédia :
+                br.
+                |offrez-vous le meilleur avec 
+                strong.
+                    LPIEWDPROD
+                |.
+
+        .hr
+
+        section.travail
+            h1(itemprop="headline") Notre travail au quotidien
+            div(class="slider" id="slider")
+            article
+                img(src="images/qsn_first/image00001.jpeg", alt="travail1")
+                img(src="images/qsn_first/image00002.jpeg", alt="travail1")
+                img(src="images/qsn_first/image00003.jpeg", alt="travail1")
+            article 
+                img(src="images/qsn_second/image00004.jpeg", alt="travail1")
+                img(src="images/qsn_second/image00002.jpeg", alt="travail1")
+                img(src="images/qsn_second/image00003.jpeg", alt="travail1")
+
+
+        .hr
+
+        section(class="two")
+            h1(itemprop="headline") Notre équipe
+            .person(itemprop="director" itemscope itemtype="https://schema.org/Person")
+                .txt
+                    h5(itemprop="name") Wend-Yam
+                    p Responsable marketing
+                    p.sub Stratégies de ventes, vision, objectifs
+                img(src="images/11.jpg")        
+            .person(itemprop="member" itemscope itemtype="https://schema.org/Person")
+                img(src="images/12.jpg")        
+                .txt
+                    h5(itemprop="name") Pierre
+                    p Cadreur réalisateur
+                    p.sub Réalisation, montage    
+            .person(itemprop="member" itemscope itemtype="https://schema.org/Person")
+                .txt
+                    h5(itemprop="name") Helena
+                    p Responsable communication
+                    p.sub S.A.V. Recherche clientèle
+                img(src="images/14.jpg")        
+            .person(itemprop="member" itemscope itemtype="https://schema.org/Person")
+                img(src="images/15.png")        
+                .txt
+                    h5(itemprop="name") Nathalie
+                    p Photographe indépendante
+                    p.sub Shooting photo, montage
+
+
+block append javascript
+
+    script(src="/javascript/qsn.js") 

@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+block append head
+    link(rel='stylesheet', href='/css/contact.css')
+    title Contacter #{title1}
+
+block content
+    main
+        #response
+        h1(itemprop="headline") Nous contacter
+        section(class="contact")
+            form(action="/contact", method="post") 
+                label(for="nom") Nom
+                input(type='text' name="nom"  placeholder="Votre Nom" required)
+                label(for="") Prénom
+                input(type='text' name="prenom"  placeholder="Votre prénom" required)
+                label(for="") Numéro de téléphone
+                input(type='text' name="tel"  placeholder="Votre numéro de téléphone" required)
+                label(for="") E-mail
+                input(type='text' name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Votre adresse e-mail" required)
+                label(for="sujet") Sujet 
+                select(name="sujet" required)
+                    option(value="" disabled selected) Veuillez sélectionner un sujet
+                    option(value="clip_publicitaire") Clip publicitaire
+                    option(value="clip_musicaux") Clip musicaux
+                    option(value="evenementiel") Évènementiel
+                    option(value="shooting_photo") Shooting photo, Natalie photographe indépendante
+                label(for="message")
+                textarea(name="message", cols="30", rows="10", placeholder="votre message")
+                input(type="submit", value="Envoyer")
+
+block append javascript
+    script.
+        var msg = !{JSON.stringify(msg).replace(/<\//g, "<\\/")}
+
+    script(src="/javascript/contact.js") 

@@ -1,0 +1,155 @@
+main a{
+    color: white;
+    
+    border: solid 2px white;
+    border-radius: 100px;
+
+    padding: 5px 20px;
+    margin: 2% auto;
+    width: max-content;
+
+    display: block;
+}
+main a:hover{
+    color: rgba(0,0,0,.8);
+    background: white;
+}
+/* -- END OF GENERAL -- */
+
+/* -- ONE -- */
+main .one{
+    flex-direction: column;
+}
+main .one .text{
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+}
+main section .text{
+    text-align: left;
+    color: white;
+    display: block;
+    font-weight: lighter;
+}
+
+/* -- three -- */
+main .three{
+    flex-direction: column;
+    background-color: white;
+}
+main .three img{
+    width: 80%;
+}
+main .three .text{
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -8%);
+    text-shadow: none;
+}
+main .three h1{
+    font-size: 2em;
+    font-weight: bold;    
+}
+main .three .text *{
+    color: black;
+    font-weight: lighter;
+}
+main .three h5{
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+main .three h5{
+    display: inline-block;
+    margin: 0 10px;
+}
+main .three > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* -- FOUR -- */
+main .info{
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .info strong{
+    margin: 0 3.5px 0 0;
+}
+main section.four{
+    height: fit-content;
+
+    background-color: hsl(0, 0%, 7%);
+
+    flex-direction: column;
+}
+main section.four img{
+    width: 100%;
+}
+
+
+/* tablet */
+@media screen and (max-width: 1030px) {
+    main{
+        font-size: 14px;
+    }
+    main .one .text{
+        max-width: 90vw;
+
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        text-align: center;
+        text-shadow: 0 0 10px rgba(0,0,0,.8), 0 0 10px rgba(0,0,0,.8);
+    }
+    main .one h1{
+        font-size: 25px;
+    }
+    main .two h1{
+        font-size: 35px;
+    }
+    main .three{
+        padding: 5% 0%;
+    }
+    main .three .text{
+        max-width: 85vw;
+    }
+    main .three h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    main .three img{
+        width: 100%;
+    }
+    main .info{
+        height: 80px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+    main .one img{
+        display: none;
+    }
+    main .one{
+        height: 90vh;
+    }
+    main .one{
+        background: url('../images/4.jpg')
+    }
+    main .one .text h1{
+        font-size: 20px;
+    }
+    main .three .text h1{
+        font-size: 22px;
+    }
+    main .three{
+        padding: 15% 0%;
+    }
+}

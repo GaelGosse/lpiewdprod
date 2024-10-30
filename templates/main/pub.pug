@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block append head
+    link(rel='stylesheet', href='/css/pub.css')
+    title Prestation publicitaire
+
+block content
+    main
+        section(class="one")
+            img(src="images/6.jpg")
+            .text
+                h1(itemprop="headline") 
+                    strong. 
+                        Faites partie de ceux 
+                    |qui nous ont fait confiance
+                p Nous ferons tout notre possible pour répondre à vos attentes
+
+        section(class="two")
+            video(muted autoplay loop)
+                source(src="/video/presentation_salle.mp4" type="video/mp4")
+        
+        .info
+            p LPIEWDPROD met 
+                strong.
+                    à votre disposition 
+                |un chef de projet pour toutes vos réalisations 
+
+        section(class="three")
+            img(src="images/7.jpg")
+                
+        section(class="four")
+            video(muted autoplay loop)
+                source(src="/video/ordi.mp4" type="video/mp4")

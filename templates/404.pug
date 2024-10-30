@@ -1,0 +1,18 @@
+extends layout.pug
+
+block append head
+    link(rel='stylesheet', href='/css/contact.css')
+    title Page non trouvée
+
+block content
+    main.err404
+        h2 Erreur 404 
+        p La page demandée n'existe pas.
+        p Vous allez etre redirigé(e) vers la page d'accueil (
+            span(id="time").
+                10 
+            |sec).
+
+block javascript
+    script(src="/javascript/404.js") 
+

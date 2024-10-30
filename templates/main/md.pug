@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block append head
+    link(rel='stylesheet', href='/css/md.css')
+    title Marketing digital
+
+block content
+    main
+        section(class="one")
+            img(src="images/4.jpg")
+            .text
+                h1(itemprop="headline") LPIEWDPROD vous propose de mettre 
+                    br.
+                    |en valeur 
+                    strong.
+                        vos produits
+
+        section(class="two")
+            video(muted autoplay loop)
+                source(src="/video/kogocook.mp4" type="video/mp4")
+
+        section(class="three")
+            img(src="images/5.jpg")
+            .text
+                h1(itemprop="headline") 
+                    strong. 
+                        On s'occupe  
+                    |de votre marketing digital
+                
+        section(class="four")
+            video(muted autoplay loop)
+                source(src="/video/le_petit_cafe.mp4" type="video/mp4")
+

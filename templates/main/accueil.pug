@@ -1,0 +1,66 @@
+extends ../layout.pug
+
+block append head
+	link(rel='stylesheet', href='/css/accueil.css')
+	title #{title1} #{title2}
+
+block content
+	main(class="accueil")
+		section(class="one")
+			img(src="images/1.jpg")
+
+			.text
+				h1(itemprop="headline") LPIEWDPROD vous propose
+					strong.
+						de gagner du temps
+
+				p Vos clips, publicités, projets, réalisés par des professionnels
+
+				a(href="/contact") En savoir plus...
+
+		section(class="two")
+			img(src="images/2.jpg")
+			.text
+				.headtwo
+					h1(itemprop="headline") Offrez vous le meilleur
+					.line
+						h5
+							strong LPIEWDPROD
+						a(href="/contact") En savoir plus...
+
+				.footwo Du matériel de qualité, et une équipe formée pour vous offrir le meilleur,
+					br.
+					|à votre disposition pour toutes vos créations
+
+		div(class="info icons")
+			p Retrouvez nous sur les réseaux sociaux
+			div
+				a(href="https://www.facebook.com/lpiewdprod" target="_blank")
+					i(class="fab fa-facebook")
+				a(href="https://www.instagram.com/lpie_wd" target="_blank")
+					i(class="fab fa-instagram")
+				a(href="https://www.youtube.com/channel/UCmwXqhoXFCmwKHuHlAjc5RA" target="_blank")
+					i(class="fab fa-youtube")
+
+		section(class="three")
+			video(muted autoplay loop)
+				source(src="video/cuisine.mp4" type="video/mp4")
+
+		section(class="suppl")
+			p Ils nous ont fait
+				strong.
+					confiance
+			a(href="https://www.sortlist.fr/agency/lpiewdprod-entertainment" class="confiance" target="_blank")
+				.hoverBlack
+				img(src="images/screenshot.png" alt="screenshot")
+				img(src="https://core.sortlist.com//_/apps/core/images/badges-en/badge-flag-blue-light-xl.svg" alt="flagSort")
+
+		.info
+			p Notre matériel 
+				strong.
+					à votre disposition
+		.hr
+
+		section(class="four")
+			img(src="images/3.jpg")
+

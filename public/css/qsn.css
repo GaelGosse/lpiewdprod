@@ -1,0 +1,327 @@
+body{
+    /* background: white; */
+    color: black;
+}
+main .one{
+    background-color: #111;
+}
+main .one .text{
+    color: white;
+    
+    top: 53%;
+    left: 5%;
+    transform: translate(-5%, -53%);
+    
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    
+    top: 10%;
+    transform: translate(-50%, -10%);
+}
+main .one h1{
+    font-size: 2.7rem !important;
+}
+
+/* -- presentation -- */
+main .presentation{
+    background: white;
+    color: black;
+    margin: 0 auto;
+    padding: 2vh 0 4vh;
+
+    max-width: 800px;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .presentation p{
+    margin: 1vh 0 .5vh;
+}
+main .presentation p:last-of-type{
+    width: 100%;
+}
+main .presentation h1{
+    margin: 0 0 4vh;
+}
+
+main .travail{
+    background: white;
+    display: block;
+    text-align: center;
+}
+main .travail h1{
+    /* color: white; */
+    padding: 4vh 0;
+}
+main .travail article{
+    width: 100%;
+
+    padding: 0 0 6vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main .travail img{
+    width: 30vw;
+    display: inline-block;
+}
+main .slider{
+    display: none;
+}
+
+/* -- two -- */
+main .two {
+
+    background: white;
+    color: black;
+    flex-direction: column;
+    margin: 0;
+}
+main h1{
+    font-size: 2.5rem;
+}
+main .hr{
+    background: linear-gradient(90deg, transparent 4%, black, transparent 96%);
+    background: -o-linear-gradient(90deg, transparent 4%, black, transparent 96%);
+    background: -moz-linear-gradient(90deg, transparent 4%, black, transparent 96%);
+    background: -webkit-linear-gradient(0deg, transparent 4%, black, transparent 96%);
+
+    margin: 4vh 0 5vh;
+}
+main .two .person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+main .two .person h5{
+    font-size: 2rem;
+    margin: 0 0 5%;
+}
+main .two .person:nth-of-type(odd){
+    margin-left: 50%;
+    text-align: right;
+}
+main .two .person:nth-of-type(even){
+    margin-right: 50%;
+}
+main .two .person + .person {
+    margin-top: -2%;
+}
+main .person .txt p{
+    font-size: 1.4rem;
+}
+main .person .txt .sub{
+    font-size: 1.1rem;
+    font-style: italic;
+}
+main .two img{
+    height: 30vw;
+    width: auto;
+
+    margin: 0 5%;
+}
+
+
+
+/* tablet */
+@media screen and (max-width: 1030px) {
+    main{
+        background: white;
+        padding: 0;
+    }
+    main{
+        font-size: 14px;
+    }
+    main .one{
+        margin: 8vh 0 0;
+    }
+    main .one .text {
+        max-width: 95vw;
+    }
+    main .one h1{
+        font-size: 32px !important;
+    }
+
+    main .presentation{
+        padding: 0 25px;
+    }
+
+    main .two h1{
+        font-size: 32px !important;
+        margin: 0 0 10%;
+    }
+    main .two h5{
+        font-size: 30px !important;
+    }
+    main section.one .text{
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    main .two .person:nth-of-type(odd){
+        margin-left: 30%;
+    }
+    main .two .person:nth-of-type(even){
+        margin-right: 30%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+
+    main section.one .text{
+        top: 50%;
+        transform: translate(-50%, 50%);
+     
+        text-align: center;
+        background: rgba(0,0,0,.5);
+        padding: 2% 10%;
+    }
+    main section.one .text h1{
+        font-size: 20px !important;
+    }
+    main h1{
+        font-size: 28px;
+    }
+    main .hr{
+        margin: 7vh 0 0;
+    }
+    main .presentation h1, main .travail h1, main .two h1{
+        margin: 3vh 0;
+        padding: 0;
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 60px;
+    }
+    main .slider{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+    main .travail img{
+        width: 100%;
+        display: initial;
+    }
+    .slider {
+        width: 100%;
+        position: relative;
+    }
+    .slider *{
+        border: none !important;
+    }
+    .slider,
+    .divimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+    .divimg, .slick-track {
+        height: 70vh !important;
+    }
+    .slider .slick-track img {
+        height: 70vh;
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .slider .slick-prev,
+    .slider .slick-next {
+        z-index: 99;
+        position: absolute;
+        border: none;
+        color: white;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 5% 3.5%;
+        font-size: 1.5rem;
+        transform: translateY(-50%);
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider .slick-prev:hover,
+    .slider .slick-next:hover {
+        background: rgba(0, 0, 0, 0.65);
+        cursor: pointer;
+        transform: translate(-10%, -50%) scale(1.2);
+    }
+    .slider .slick-prev:active,
+    .slider .slick-next:active {
+        background: rgba(0, 0, 0, 0.65);
+        cursor: pointer;
+        transform: translate(0%, -50%) scale(0.9);
+    }
+    .slider .slick-prev {
+        top: 50%;
+        left: 0;
+    }
+    .slider .slick-next {
+        top: 50%;
+        right: 0;
+    }
+    .slider .slick-dots {
+        margin: 0 auto;
+        width: max-content;
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .slider .slick-dots li {
+        display: inline-block;
+        margin: 0.5rem;
+    }
+    .slider .slick-dots li button {
+        padding: 10px;
+        border: none;
+    }
+    .slick-dots li button:before{
+        background: rgba(0,0,0,.5);
+    }
+    .slick-dots li.slick-active button:before{
+        background: black;
+    }
+    .slider::-webkit-scrollbar,
+    .slider::-webkit-scrollbar-track,
+    .slider::-webkit-scrollbar-thumb,
+    .slider::-webkit-scrollbar-thumb:hover {
+        display: none;
+    }
+    main .travail article{
+        display: none;
+    }
+    main .two .person {
+        width: 95vw;
+        margin: 0 auto;
+        border-bottom: solid 1px black;
+        justify-content: flex-start;
+    }
+    main .two .person:not(.person:last-of-type){
+        margin: 0 auto 10% !important;
+    }
+    main .two .person:nth-of-type(even){
+        text-align: left;
+    }
+    main .two .person *{
+        width: 45vw;
+        z-index: 2;
+    }
+    main .two .person h5{
+        font-size: 25px !important;
+    }
+    main .two .person p{
+        font-size: 16px;
+    }
+    main .two .person .sub{
+        font-size: 12px;
+    }
+    main .two .person img{
+        width: 38vw;
+        height: auto;
+        z-index: 1;
+    }
+}
